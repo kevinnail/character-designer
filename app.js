@@ -26,17 +26,23 @@ headSelect.addEventListener('change', () => {
 
 middleSelect.addEventListener('change', () => {
     // > set the character middle from the value of the middle <select>
+    character.middle = middleSelect.value;
     // > redisplay the character
+    displayCharacter();
 });
 
 pantsSelect.addEventListener('change', () => {
     // > set the character head from the value of the head <select>
+    character.pants = pantsSelect.value;
     // > redisplay the character
+    displayCharacter();
 });
 
 function displayCharacter() {
     headImage.src = 'assets/character/' + character.head + '-head.png';
     // > set the middle and pants images .src property based on the character middle and pants properties
+    middleImage.src = 'assets/character/' + character.middle + '-middle.png';
+    pantsImage.src = 'assets/character/' + character.pants + '-pants.png';
 }
 
 function displayPhrases() {
@@ -52,10 +58,13 @@ function displayPhrases() {
 
 addButton.addEventListener('click', () => {
     // > Get the phrase from the value of the phrase input
+
     // > Use ".push" to add the phrase to the end of the character phrases array
+
     // > Re-display the phrases
 
     // reset the input
+
     phraseInput.value = '';
 });
 
