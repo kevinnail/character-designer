@@ -55,7 +55,9 @@ function displayPhrases() {
         // > set the text of the li to the phrase
         li.textContent = phrase;
         // > append the <li> to the phrases list
-        phraseList.append(li);
+        if (li.textContent !== '') {
+            phraseList.append(li);
+        }
     }
 }
 
